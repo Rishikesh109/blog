@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
+    <link rel="stylesheet" href="academics.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color:  #f2e6ff;
+            background-color: #f2e6ff;
         }
 
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color:#ffcc80;
+            background-color: #ffcc80;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
         }
 
         .project {
-            flex-basis: 100%; 
             margin-bottom: 30px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 20px;
@@ -52,32 +46,151 @@
             border-radius: 8px;
             margin-bottom: 10px;
         }
+ /* Custom Styles */
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: #ca8a04;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --extra-light: #faf5ff;
+            --max-width: 1200px;
+        }
 
-        .project-info {
-            color: orange; 
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2e6ff; /* Lavender background */
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        nav .logo a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        nav .checkbox {
+            display: none;
+        }
+
+        nav input {
+            display: none;
+        }
+
+        nav .checkbox i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            border-top-color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .container {
+            background-color: white; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 100px; /* Adjusted margin-top */
+            max-width: 800px;
+        }
+
+        h1, h2 {
+            color: var(--primary-color); /* Lavender color for headings */
+        }
+
+        p {
+            color: #333; /* Dark text color */
+            text-align: justify; /* Justify text alignment */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="project">
-            <h2>Project 1: LET'S CHAT A CHAT TOOL</h2>
-            <img class="project-img" src="project1.jpg" alt="Project 1 Image">
-            <div class="project-info">
-                <p>LET’S CHAT is a tool that allows users to chat and send messages to everyone. A chat room is an interface where we can communicate with multiple users over the network. It can be interpersonal and group chat too. Chat tools enable users to start chatting with other users in real-time. This tool is highly scriptable allowing users to automate repetitive tasks. It is also highly portable as they rely on text-based input and output. This chat tool is designed to facilitate efficient and real-time text-based communication between users. It allows individuals to exchange messages, information and updates quickly and without the distractions of graphical interfaces. The main purpose of this chat tool is to provide users with a means of real-time text-based communication within a terminal or a command-line environment extended with a interface . The tool will support multiple chat rooms and can be used to communicate with multiple users on a network. It also enables users to transmit text messages. It also enables instant messaging and can be used in a number of scenarios. Command-line tools are often preferred over GUI applications by software developers. Since this chat tool run in terminal sessions, they can benefit from the security features of the terminal environment, as they often use a minimal amount of screen space, leaving more room for other terminal-based activities.</p>
-            </div>
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="#">Rishikesh</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="myworks2.html">My Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="project">
+        <h2>Project 1: LET'S CHAT A CHAT TOOL</h2>
+        <img src="project1.jpg" alt="Project 1 Image" class="project-img">
+        <div class="project-info">
+            <p>LET’S CHAT is a tool that allows users to chat and send messages to everyone. A chat room is an interface where we can communicate with multiple users over the network. It can be interpersonal and group chat too. Chat tools enable users to start chatting with other users in real-time. This tool is highly scriptable allowing users to automate repetitive tasks. It is also highly portable as they rely on text-based input and output. This chat tool is designed to facilitate efficient and real-time text-based communication between users. It allows individuals to exchange messages, information, and updates quickly and without the distractions of graphical interfaces. The main purpose of this chat tool is to provide users with a means of real-time text-based communication within a terminal or a command-line environment extended with an interface. The tool will support multiple chat rooms and can be used to communicate with multiple users on a network. It also enables users to transmit text messages. It also enables instant messaging and can be used in a number of scenarios. Command-line tools are often preferred over GUI applications by software developers. Since this chat tool runs in terminal sessions, they can benefit from the security features of the terminal environment, as they often use a minimal amount of screen space, leaving more room for other terminal-based activities.</p>
         </div>
     </div>
 
-    <div class="container">
-        <div class="project">
-            <h2>Project 2: CUSTOMISED FOOD DELIVERY</h2>
-            <img class="project-img" src="project2.jpg" alt="Project 2 Image">
-            <div class="project-info">
-                <p>The implementation of a customized food delivery system offers significant advantages in enhancing customer satisfaction, streamlining operations, and maximizing revenue potential for food businesses. By tailoring the ordering process to individual preferences, such as dietary restrictions and flavor profiles, companies can foster stronger customer loyalty and increase order frequency. Additionally, the integration of advanced technology enables efficient order management, real-time tracking, and personalized recommendations, ultimately leading to improved overall service quality. In conclusion, a customized food delivery system presents a lucrative opportunity for food establishments to differentiate themselves in a competitive market while meeting the evolving needs of their clientele. 
-                </p>
-            </div>
+    <div class="project">
+        <h2>Project 2: CUSTOMISED FOOD DELIVERY</h2>
+        <img src="project2.jpg" alt="Project 2 Image" class="project-img">
+        <div class="project-info">
+            <p>The implementation of a customized food delivery system offers significant advantages in enhancing customer satisfaction, streamlining operations, and maximizing revenue potential for food businesses. By tailoring the ordering process to individual preferences, such as dietary restrictions and flavor profiles, companies can foster stronger customer loyalty and increase order frequency. Additionally, the integration of advanced technology enables efficient order management, real-time tracking, and personalized recommendations, ultimately leading to improved overall service quality. In conclusion, a customized food delivery system presents a lucrative opportunity for food establishments to differentiate themselves in a competitive market while meeting the evolving needs of their clientele.</p>
         </div>
     </div>
+</div>
 </body>
 </html>
