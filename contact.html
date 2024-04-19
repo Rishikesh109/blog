@@ -6,24 +6,117 @@
     <title>Contact Information</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: #ca8a04;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --extra-light: #faf5ff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color:#f2e6ff;
+            font-family: "Poppins", sans-serif;
+            background-color: #f2e6ff;
             padding: 20px;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        nav .logo a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        nav .checkbox {
+            display: none;
+        }
+
+        nav input {
+            display: none;
+        }
+
+        nav .checkbox i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            border-top-color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            color: var(--secondary-color);
         }
 
         section {
-            background-color:#ffcc80;
+            background-color: white; /* White background for section */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin-bottom: 20px;
+            margin-top: 170px; /* Adjusted margin-top */
+            max-width: 800px;
         }
 
         h2 {
-            color: #333;
+            color: var(--primary-color); /* Lavender color for headings */
             margin-bottom: 15px;
         }
+
+        p {
+            color: #333; /* Dark text color */
+            text-align: justify; /* Justify text alignment */
+        }     
 
         .contact-info {
             list-style: none;
@@ -55,6 +148,21 @@
     </style>
 </head>
 <body>
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="#">Rishikesh</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+          <input type="checkbox" name="check" id="check" />
+        <ul>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="myworks2.html">My Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
     <section>
         <h2>Contact Information</h2>
         <ul class="contact-info">
