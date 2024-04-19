@@ -3,89 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Skills</title>
+    <title>Skills</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: #ca8a04;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --extra-light: #faf5ff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fcf8ec; 
+            background-color: #f2e6ff; /* Lavender background */
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        nav .logo a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        nav .checkbox {
+            display: none;
+        }
+
+        nav input {
+            display: none;
+        }
+
+        nav .checkbox i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            border-top-color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            color: var(--secondary-color);
         }
 
         .container {
-            max-width: 800px;
-            margin: 50px auto;
-            text-align: center;
-            background-color:  #e7e7e7; 
+            background-color: white; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 100px; /* Adjusted margin-top */
+            max-width: 800px;
         }
 
-        h1 {
-            margin-bottom: 30px;
-            color: #4d4d4d;
+        h1, h2 {
+            color: var(--primary-color); /* Lavender color for headings */
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        p {
+            color: #333; /* Dark text color */
+            text-align: justify; /* Justify text alignment */
         }
 
-        .skill {
-            background-color: #f0f0f0;
-            border-radius: 10px; 
-            margin: 15px; 
-            padding: 25px; 
-            width: calc(33.33% - 30px);
-            box-sizing: border-box;
-            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); 
-        }
-
-        .skill h2 {
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .skill-level {
-            background-color: #ddd;
-            border-radius: 5px;
-            height: 25px; 
-            width: 100%;
-        }
-
-        .skill-level-bar {
-            background-color: #ff8c00; 
-            border-radius: 5px;
-            height: 100%;
+        .progress {
+            height: 20px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>My Skills</h1>
-        <div class="skills">
-            <div class="skill">
-                <h2>HTML</h2>
-                <div class="skill-level">
-                    <div class="skill-level-bar" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h2>CSS</h2>
-                <div class="skill-level">
-                    <div class="skill-level-bar" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <h2>JavaScript</h2>
-                <div class="skill-level">
-                    <div class="skill-level-bar" style="width: 70%;"></div>
-                </div>
-            </div>
-            
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="#">Rishikesh</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="myworks2.html">My Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h1>Skills</h1>
+
+    <div class="section">
+        <h2>HTML</h2>
+        <p>Proficient in HTML, including the use of semantic markup and responsive design principles.</p>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
         </div>
     </div>
+
+    <div class="section">
+        <h2>Python</h2>
+        <p>Strong skills in Python, including scripting, data manipulation, and web development using frameworks like Django.</p>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Java</h2>
+        <p>Proficient in Java programming, with experience in developing desktop, web, and Android applications.</p>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>C Programming</h2>
+        <p>Familiar with C programming language, including low-level system programming and algorithmic problem-solving.</p>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Data Structures</h2>
+        <p>Knowledgeable in implementing and using various data structures such as arrays, linked lists, and trees to solve problems efficiently.</p>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Artificial Intelligence and Machine Learning</h2>
+        <p>Understanding of AI and ML concepts, with experience in developing machine learning models for data analysis and prediction.</p>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery (optional, for certain Bootstrap features) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
