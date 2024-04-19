@@ -4,61 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: #ca8a04;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --extra-light: #faf5ff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color:#f2e6ff; 
+            background-color: #f2e6ff; /* Lavender background */
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: 0.3s;
+        }
+
+        nav .logo a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        nav .checkbox {
+            display: none;
+        }
+
+        nav input {
+            display: none;
+        }
+
+        nav .checkbox i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            border-top-color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            color: var(--secondary-color);
         }
 
         .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #ffcc80;
+            background-color: white; /* White container background */
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 100px; /* Adjusted margin-top */
+            max-width: 800px;
         }
 
-        h1 {
-            margin-bottom: 30px;
-            color: #333;
+        h1, h2 {
+            color: var(--primary-color); /* Lavender color for headings */
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .section p {
-            color: #666;
-            text-align:justify;
+        p {
+            color: #333; /* Dark text color */
+            text-align: justify; /* Justify text alignment */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Academics</h1>
-        
-        <div class="section">
-            <h2>Schooling</h2>
-            <p>I Have Done My Schooling From St.Peter's Public School Bowenpally In The Year 2019 With a CGPA of 6.9</p>
-        </div>
-        
-        <div class="section">
-            <h2>Intermediate</h2>
-            <p>I Have Done My Intermediate From Narayana Junior College ,West Maredpally In The Year 2021 With a CGPA of 8.5 </p>
-        </div>
-        
-        <div class="section">
-            <h2>Undergraduate</h2>
-            <p>Iam Currently Pursuing My BTECH In Mallareddy College Of Engineering And Technology In The Field Of Artificial Intelligence And Machine Learning , With CGPA of 7.3 Upto (2-2)</p>
-        </div>
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a href="#">Rishikesh</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="myworks2.html">My Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
+</nav>
+<div class="container">
+    <h1>Academics</h1>
+
+    <div class="section">
+        <h2>Schooling</h2>
+        <p>I completed my schooling at St. Peter's Public School, located in Bowenpally, Hyderabad. I graduated from this esteemed institution in the year 2019. During my time at St. Peter's Public School, I not only acquired academic knowledge but also cultivated essential life skills and values that have shaped me into the person I am today. The nurturing environment and dedicated faculty members at St. Peter's Public School have played a significant role in my educational journey, instilling in me a strong foundation for future success..</p>
+    </div>
+  
+    
+    <div class="section">
+        <h2>Intermediate</h2>
+        <p>"I pursued my intermediate education at Narayana Junior College, a renowned institution located in [insert location]. Graduating from Narayana Junior College in the year 2021 was a significant milestone in my academic journey. The college provided a conducive environment for learning and growth, offering quality education and guidance to help students excel in their chosen fields. With dedicated faculty members and state-of-the-art facilities, Narayana Junior College equipped me with the knowledge and skills necessary to navigate the challenges of intermediate education successfully. My time at Narayana Junior College has not only enriched my academic understanding but also fostered personal and intellectual development, preparing me for the next phase of my educational and professional endeavors.</p>
+
+    <div class="section">
+        <h2>Undergraduate</h2>
+        <p>I am currently pursuing my undergraduate studies in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning (CSE-AIML) at Malla Reddy College of Engineering and Technology (MRCET) in Hyderabad. Being a student at MRCET has been an enriching experience filled with opportunities for academic and personal growth. The college's emphasis on practical learning, coupled with a robust curriculum, has provided me with a solid foundation in the field of computer science. MRCET's dynamic learning environment, supplemented by experienced faculty members and modern facilities, has enabled me to explore my passion for AI and machine learning while honing my problem-solving skills. I am grateful for the supportive community and resources available at MRCET, which continue to inspire and empower me on my educational journey.</p>
+    </div>
+
+   
+</div>
+
+<!-- Bootstrap JS and jQuery (optional, for certain Bootstrap features) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
